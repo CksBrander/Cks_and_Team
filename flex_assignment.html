@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        /*.content-box{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border:10px solid green;
+            background-color: lightblue;
+            box-sizing: content-box;
+        }
+        .border-box{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border:10px solid red;
+            background-color: lightgreen;
+            box-sizing: border-box;
+        }*/
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        .parent{
+            padding-top: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap:wrap;
+        }
+        .Box{
+            border:2px solid blue;
+            width:300px;
+            height:500px;
+            background-color:aqua ;
+            align-content: center;
+            padding-top: 3%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        #Box-1{
+            order: 1;
+        }
+        #Box-2{
+            order: 2;
+        }
+        #Box-3{
+            order: 3;
+        }
+        h1{
+
+        }
+        .d1{
+            align-content: center;
+            padding-top: 3%;
+            display: flex;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="Box" id="Box-1">
+            <div class="d1"><h1>Basic</h1></div>
+            <div>
+                <p>
+                    $10/month<br>
+                    Feature 1<br>
+                    Feature 2
+    
+                </p>
+            </div>
+        </div>
+        <div class="Box" id="Box-2">Box-2</div>
+        <div class="Box" id="Box-3">Box-3</div>
+    </div>
+</body>
+</html>
