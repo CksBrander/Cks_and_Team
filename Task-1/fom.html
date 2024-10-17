@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Enter Your Details Here</h1>
+    <form name="myForm" action="#" onsubmit="return validateForm()">
+        <label>First Name</label>
+        <input type="text" name="FName" id="fname" placeholder="ABES" required/><br><br>
+        <span id="name-error" class="error-message"></span>
+        <label>Age</label>
+        <input type="number" name="number" placeholder="Type Number Only" required/><br><br>
+        <label>Date Of Birth</label>
+        <input type="date" name="dob" required/><br><br>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="@abes.ac.in" required/>
+        <label>Password</label>
+        <input type="password" name="pass" required id="pass"/><br>
+        <span id="password-error" class="error-message"></span>
+        <p>Enter your TShirt Size</p>
+        <input type="radio" name="fav_language"/> Small size<br>
+        <input type="radio" name="fav_language"/> Large size<br>
+
+        <p>Your Favorite Color</p>
+        <input type="color" /><br><br>
+        <p>Tell us about yourself <textarea></textarea></p>
+        <input type="reset" name="rest"/>
+        <input type="submit" name="rest"/>
+
+    </form>
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const password = document.getElementById("pass").value;
+            const nameError = document.getElementById("name-error");
+            const passwordError = document.getElementById("password-error");
+          
+            nameError.textContent = "";
+            passwordError.textContent = "";
+          
+            let isValid = true;
+          
+            if (name.length > 5 && (name === "" || /\d/.test(name))) {
+                nameError.textContent =
+                    "Please enter your name properly.";
+                isValid = false;
+            }
+          
+            if (password === "" || password.length < 6) {
+                passwordError.textContent =
+                    "Please enter a password with at least 6 characters.";
+                isValid = false;
+            }
+          
+            return isValid;
+          }
+    </script>
+</body>
+</html>

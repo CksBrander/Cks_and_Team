@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox 11</title>
+</head>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    flex-wrap: rap;
+}
+.Box {
+    border: 2px solid blue;
+    width: 100px;
+    height: 500px;
+    background-color:white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: centre;
+}
+#Box-1
+{
+    order:1;
+    flex-grow: 1;
+}
+#Box-2
+{
+    order: 2;
+    flex-grow: 1;
+    
+}
+#Box-3
+{
+    order:3;
+    flex-grow: 1;
+}
+</style>
+<body>
+    <div class="parent">
+        <div class="Box" id="Box-1">Basic</div>
+        <div class="Box" id="Box-2">premium</div>
+        <div class="Box" id="Box-3">pro</div>
+        
+    </div>
+    
+</body>
+</html>
